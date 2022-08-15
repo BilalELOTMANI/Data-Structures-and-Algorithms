@@ -6,6 +6,7 @@ typedef struct node{
 	struct node *next;
 } node;
 
+// Create a new node in the memory (Heap Memory)
 node *newNode(int v)
 {
 	node *ptr;
@@ -14,6 +15,7 @@ node *newNode(int v)
 	ptr->next = NULL;
 }
 
+// Insert an element in the beginning of the list (or the head)
 void addBeginning(node **head,int v)
 {
 	node *b;
@@ -23,6 +25,7 @@ void addBeginning(node **head,int v)
 	
 }
 
+// Insert an element in the end of the list
 void addEnd(node **head, int v)
 {
 	node *temp, *b;
@@ -39,6 +42,7 @@ void addEnd(node **head, int v)
 	}
 }
 
+// Insert an element in the middle of the list
 void addMiddle(node **head, int elem, int v)
 {
 	node *temp, *b;
@@ -59,7 +63,7 @@ void addMiddle(node **head, int elem, int v)
 	}
 }
 
-
+// Delete the element in the beginning of the list
 void deleteBiginning(node **head)
 {
 	node *temp;
@@ -71,7 +75,7 @@ void deleteBiginning(node **head)
 	}
 }
 
-
+// Delete an element in the middle of the list
 void deleteMiddle(node **head, int v)
 {
 	node *temp, *ptr;
@@ -95,7 +99,7 @@ void deleteMiddle(node **head, int v)
 	}
 }
 
-
+// Delete the element in the end of the list
 void deleteEnd(node **head)
 {
 	node *temp;
@@ -116,7 +120,7 @@ void deleteEnd(node **head)
 	}
 }
 
-
+// Sort the list
 void sortList(node **head)
 {
 	int a;
@@ -135,7 +139,7 @@ void sortList(node **head)
 }
 
 
-
+// Show the elements of the list iteratively
 void showListIter(node *head)
 {
 	node *temp;
@@ -149,6 +153,7 @@ void showListIter(node *head)
 	else printf("\nThe list is empty !!!\n");
 }
 
+// Show the elements of the list recursively
 void showListRec(node *head)
 {
 	if(head == NULL) return;
@@ -158,6 +163,7 @@ void showListRec(node *head)
 	}
 }
 
+// Show the reverse list
 void showRevList(node *head)
 {
 	if(head == NULL) return;
@@ -167,7 +173,7 @@ void showRevList(node *head)
 	}
 }
 
-
+// Show the reverse list iteratively
 void mirrorListIter(node **head)
 {
 	node *current, *prev, *after;
@@ -183,7 +189,7 @@ void mirrorListIter(node **head)
 }
 
 
-
+// Show the reverse list recursively
 node *mirrorListRec(node *head)
 {
 	node *revHead;
