@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// Create a node structure
 typedef struct node{
 	int data;
 	struct node *next;
