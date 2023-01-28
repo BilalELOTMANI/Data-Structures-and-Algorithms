@@ -32,7 +32,7 @@ Box *ajouterAuDebut(Box *fin, int v)
 	return fin;
 }
 
-//**  L'ajout à la fin **//
+//**  L'ajout Ã  la fin **//
 
 Box *ajouterALaFin(Box *fin, int v)
 {
